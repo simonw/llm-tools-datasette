@@ -1,6 +1,6 @@
 [project]
 name = "llm-tools-datasette"
-version = "0.1"
+version = "0.1a0"
 description = "Expose Datasette instances to LLM as a tool"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
