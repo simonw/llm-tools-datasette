@@ -1,0 +1,28 @@
+[project]
+name = "llm-tools-datasette"
+version = "0.1"
+description = "Expose Datasette instances to LLM as a tool"
+readme = "README.md"
+authors = [{name = "Simon Willison"}]
+license = "Apache-2.0"
+classifiers = []
+requires-python = ">=3.9"
+dependencies = [
+    "llm>=0.26a1"
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+Homepage = "https://github.com/simonw/llm-tools-datasette"
+Changelog = "https://github.com/simonw/llm-tools-datasette/releases"
+Issues = "https://github.com/simonw/llm-tools-datasette/issues"
+CI = "https://github.com/simonw/llm-tools-datasette/actions"
+
+[project.entry-points.llm]
+llm_tools_datasette = "llm_tools_datasette"
+
+[project.optional-dependencies]
+test = ["pytest", "llm-echo>=0.3a1", "pytest-httpx"]
