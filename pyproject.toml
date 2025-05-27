@@ -1,6 +1,6 @@
 [project]
 name = "llm-tools-datasette"
-version = "0.1a1"
+version = "0.1"
 description = "Expose Datasette instances to LLM as a tool"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
@@ -8,7 +8,7 @@ license = "Apache-2.0"
 classifiers = []
 requires-python = ">=3.9"
 dependencies = [
-    "llm>=0.26a1"
+    "llm>=0.26"
 ]
 
 [build-system]
