@@ -15,7 +15,8 @@ class Datasette(llm.Toolbox):
         try:
             with httpx.Client(follow_redirects=True) as client:
                 response = client.get(query_url, params=params)
-                response.raise_for_status()
+                if response.status_code not in (200, 400):
+                    response.raise_for_status()
                 return response.json()
         except httpx.HTTPError as e:
             raise Exception(f"HTTP error querying Datasette: {e}")
