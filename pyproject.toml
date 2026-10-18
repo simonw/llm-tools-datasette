@@ -6,7 +6,7 @@ readme = "README.md"
 authors = [{name = "Simon Willison"}]
 license = "Apache-2.0"
 classifiers = []
-requires-python = ">=3.9"
+requires-python = ">=3.11"
 dependencies = [
     "llm>=0.26"
 ]
