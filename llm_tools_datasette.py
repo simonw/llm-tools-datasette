@@ -1,5 +1,5 @@
 import llm
-import httpx
+import httpx2
 
 
 class Datasette(llm.Toolbox):
@@ -13,12 +13,12 @@ class Datasette(llm.Toolbox):
         query_url = f"{self.url}.json"
 
         try:
-            with httpx.Client(follow_redirects=True) as client:
+            with httpx2.Client(follow_redirects=True) as client:
                 response = client.get(query_url, params=params)
                 if response.status_code not in (200, 400):
                     response.raise_for_status()
                 return response.json()
-        except httpx.HTTPError as e:
+        except httpx2.HTTPError as e:
             raise Exception(f"HTTP error querying Datasette: {e}")
         except Exception as e:
             raise Exception(f"Error querying Datasette: {e}")

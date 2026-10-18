@@ -8,7 +8,8 @@ license = "Apache-2.0"
 classifiers = []
 requires-python = ">=3.11"
 dependencies = [
-    "llm>=0.26"
+    "llm>=0.36",
+    "httpx2",
 ]
 
 [build-system]
@@ -25,4 +26,4 @@ CI = "https://github.com/simonw/llm-tools-datasette/actions"
 llm_tools_datasette = "llm_tools_datasette"
 
 [project.optional-dependencies]
-test = ["pytest", "llm-echo>=0.3a1", "pytest-httpx"]
+test = ["pytest", "llm-echo>=0.5", "pytest-httpx2"]
